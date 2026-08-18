@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { manifold } from '../lib/manifold'
+import ScrollHero from './components/ScrollHero'
 
 export const dynamic = 'force-dynamic'
 
@@ -8,6 +9,7 @@ export default async function Home() {
 
   return (
     <main>
+      <ScrollHero />
       <h1>Blog</h1>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {posts.map((post) => (
