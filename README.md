@@ -5,6 +5,10 @@
 <h1 align="center">Manifold</h1>
 
 <p align="center">
+  <a href="https://github.com/multidevagency/manifold/actions/workflows/tests.yml"><img src="https://github.com/multidevagency/manifold/actions/workflows/tests.yml/badge.svg" alt="tests"></a>
+</p>
+
+<p align="center">
   <strong>A code-first headless CMS for Laravel + Nuxt.</strong><br>
   Define a collection as a PHP class — Manifold generates the database migrations,
   the REST API, and the admin UI. Nothing else to write.
