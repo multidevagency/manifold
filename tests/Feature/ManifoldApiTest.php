@@ -32,9 +32,31 @@ class ManifoldApiTest extends TestCase
             ->assertStatus(422);
     }
 
-    public function test_entries_require_authentication(): void
+    public function test_guests_cannot_write(): void
     {
-        $this->getJson('/api/manifold/posts')->assertUnauthorized();
+        $this->postJson('/api/manifold/posts', ['title' => 'Nope'])->assertUnauthorized();
+    }
+
+    public function test_guests_cannot_read_collections_without_public_access(): void
+    {
+        $this->getJson('/api/manifold/pages')->assertUnauthorized();
+    }
+
+    public function test_guests_only_see_entries_matching_guest_filters(): void
+    {
+        $this->actingAsAdmin();
+        $draftId = $this->postJson('/api/manifold/posts', ['title' => 'Secret draft'])->json('data.id');
+        $liveId = $this->postJson('/api/manifold/posts', ['title' => 'Live post', 'status' => 'published'])->json('data.id');
+
+        $this->app['auth']->forgetGuards();
+
+        $this->getJson('/api/manifold/posts')
+            ->assertOk()
+            ->assertJsonPath('meta.total', 1)
+            ->assertJsonPath('data.0.id', $liveId);
+
+        $this->getJson("/api/manifold/posts/{$draftId}")->assertNotFound();
+        $this->getJson("/api/manifold/posts/{$liveId}")->assertOk();
     }
 
     public function test_unknown_collection_is_404(): void

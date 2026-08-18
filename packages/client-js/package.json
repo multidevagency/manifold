@@ -1,0 +1,10 @@
+{
+  "name": "@manifold-cms/client",
+  "version": "0.1.0",
+  "description": "Typed JavaScript client for the Manifold CMS REST API",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "keywords": ["manifold", "cms", "headless", "laravel"]
+}

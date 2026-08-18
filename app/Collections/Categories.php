@@ -13,6 +13,11 @@ class Categories extends Collection
 
     protected string $defaultSort = 'name';
 
+    public function access(): array
+    {
+        return ['read' => fn ($user) => true];
+    }
+
     public function fields(): array
     {
         return [

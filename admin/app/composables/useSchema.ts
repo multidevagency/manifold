@@ -19,6 +19,7 @@ export interface CollectionSchema {
   labelPlural: string
   titleField: string | null
   defaultSort: string
+  previewUrl: string | null
   fields: FieldSchema[]
   relationships: Record<string, string>
 }

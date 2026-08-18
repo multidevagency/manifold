@@ -1,0 +1,9 @@
+{
+  "name": "@manifold-cms/cli",
+  "version": "0.1.0",
+  "description": "CLI for Manifold CMS: TypeScript type generation, content export/import, project scaffolding",
+  "type": "module",
+  "bin": { "manifold": "bin/manifold.js" },
+  "license": "MIT",
+  "keywords": ["manifold", "cms", "cli", "codegen"]
+}

@@ -4,6 +4,7 @@ namespace Manifold\Cms;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Manifold\Cms\Console\MakeCollectionCommand;
 use Manifold\Cms\Console\MigrateCommand;
 
 class ManifoldServiceProvider extends ServiceProvider
@@ -24,7 +25,7 @@ class ManifoldServiceProvider extends ServiceProvider
             ->group(__DIR__.'/../routes/manifold.php');
 
         if ($this->app->runningInConsole()) {
-            $this->commands([MigrateCommand::class]);
+            $this->commands([MigrateCommand::class, MakeCollectionCommand::class]);
         }
     }
 }

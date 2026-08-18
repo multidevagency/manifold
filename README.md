@@ -57,7 +57,9 @@ class Posts extends Collection
 | **Real database tables** | `php artisan manifold:migrate` diffs your classes against the live schema and writes ordinary, reviewable Laravel migrations — then runs them |
 | **A full REST API** | `GET/POST/PATCH/DELETE /api/manifold/posts` with pagination, search, filtering, sorting, validation, and Sanctum auth |
 | **An admin panel** | The Nuxt app reads `/api/manifold/schema` and renders list views and edit forms for every collection — zero admin code per collection |
-| **Access control** | Closures per operation, enforced server-side |
+| **Access control** | Closures per operation, enforced server-side; `guestFilters()` scopes what unauthenticated visitors can read |
+| **Live preview** | Point `previewUrl()` at any frontend; the admin renders it beside the edit form, drafts included |
+| **A typed JS client + CLI** | `@manifold-cms/client` for any framework, `manifold types` for generated TypeScript |
 
 <p align="center">
   <img src="docs/screenshots/list-view.jpg" alt="Generated list view" width="720">
@@ -65,6 +67,10 @@ class Posts extends Collection
 
 <p align="center">
   <img src="docs/screenshots/edit-view.jpg" alt="Generated edit form" width="720">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/live-preview.jpg" alt="Live preview: the Next.js example site rendering a post beside the edit form" width="720">
 </p>
 
 ## Quick start
@@ -142,6 +148,70 @@ DELETE /api/manifold/{collection}/{id}
 Auth is Laravel Sanctum bearer tokens. Every operation passes through the
 collection's `access()` gates.
 
+## Connect any frontend
+
+Manifold is headless: unauthenticated reads are allowed wherever a collection
+opts in (`'read' => fn () => true`), scoped by its `guestFilters()` — the demo
+`Posts` collection exposes only `status = published` to the public. The JS
+client works in Next.js, Nuxt, SvelteKit, or plain fetch:
+
+```js
+import { createClient } from '@manifold-cms/client'
+
+const manifold = createClient({ url: 'http://localhost:8000' })
+const { data: posts } = await manifold.collection('posts').list({ sort: '-published_at' })
+```
+
+A complete Next.js App Router example lives in
+[`examples/nextjs-blog`](examples/nextjs-blog) — including **draft preview**
+(`?preview=1` uses a server-side token, so the admin's live preview pane can
+show unpublished content without exposing credentials to the browser).
+
+```bash
+cd examples/nextjs-blog
+cp .env.example .env.local   # add a MANIFOLD_SERVER_TOKEN for draft previews
+pnpm install && pnpm dev     # http://localhost:3001
+```
+
+### Live preview
+
+Give a collection a preview target:
+
+```php
+public function previewUrl(): ?string
+{
+    return 'http://localhost:3001/posts/{slug}';
+}
+```
+
+The edit view gains a **Live preview** pane rendering that URL with the entry's
+values substituted, refreshed on every save — plus a **View as JSON** pane
+showing exactly what the API serves.
+
+## CLI
+
+```bash
+manifold types                       # generate TypeScript interfaces from /schema
+manifold export posts -o posts.json  # dump a collection (guest-filtered without --token)
+manifold import posts posts.json --token <token>
+manifold init my-site                # scaffold a fresh project
+```
+
+`manifold types` turns Select options into union types:
+
+```ts
+export interface Posts {
+  id: number
+  title: string
+  status: "draft" | "review" | "published"
+  category_id: number | null
+  // ...
+}
+```
+
+Scaffold new collections from the Laravel side with
+`php artisan make:collection Products`.
+
 ## Architecture
 
 ```
@@ -152,8 +222,12 @@ packages/manifold/          the engine (Manifold\Cms)
 ├── src/Http/               REST controllers
 └── src/Console/            manifold:migrate
 
+packages/client-js/         @manifold-cms/client — framework-agnostic JS SDK
+packages/cli/               @manifold-cms/cli — types / export / import / init
+
 app/Collections/            your collections (the only code you write)
 admin/                      Nuxt 4 admin (schema-driven, Reka UI primitives, Tailwind v4)
+examples/nextjs-blog/       Next.js frontend consuming the API, with draft preview
 ```
 
 Design decisions worth knowing:
@@ -173,10 +247,10 @@ Design decisions worth knowing:
 php artisan test
 ```
 
-18 feature tests cover auth, CRUD, validation, defaults, slug generation and
+20 feature tests cover auth, CRUD, validation, defaults, slug generation and
 collision suffixing, relationship key normalization, filtering, search,
-pagination, access control, and the schema differ (create / add / drop / rename
-detection).
+pagination, access control, guest-filter scoping, and the schema differ
+(create / add / drop / rename detection).
 
 ## Roadmap
 

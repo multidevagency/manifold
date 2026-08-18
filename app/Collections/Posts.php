@@ -37,10 +37,20 @@ class Posts extends Collection
     public function access(): array
     {
         return [
-            'read' => fn ($user) => $user !== null,
+            'read' => fn ($user) => true,
             'create' => fn ($user) => $user !== null,
             'update' => fn ($user) => $user !== null,
             'delete' => fn ($user) => $user !== null,
         ];
+    }
+
+    public function guestFilters(): array
+    {
+        return ['status' => 'published'];
+    }
+
+    public function previewUrl(): ?string
+    {
+        return env('MANIFOLD_PREVIEW_URL', 'http://localhost:3001').'/posts/{slug}';
     }
 }

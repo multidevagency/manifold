@@ -1,0 +1,15 @@
+{
+  "name": "manifold-example-nextjs-blog",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001"
+  },
+  "dependencies": {
+    "@manifold-cms/client": "file:../../packages/client-js",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -20,13 +20,24 @@ class EntryController extends Controller
     {
         $col = $this->resolve($request, $collection, 'read');
 
-        return response()->json($this->entries->paginate($col, $request->all()));
+        $params = $request->all();
+        foreach ($this->guestFilters($request, $col) as $column => $value) {
+            $params['filter'][$column] = $value;
+        }
+
+        return response()->json($this->entries->paginate($col, $params));
     }
 
     public function show(Request $request, string $collection, int $id): JsonResponse
     {
         $col = $this->resolve($request, $collection, 'read');
         $entry = $this->entries->find($col, $id);
+
+        foreach ($this->guestFilters($request, $col) as $column => $value) {
+            if ($entry !== null && ($entry[$column] ?? null) !== $value) {
+                $entry = null;
+            }
+        }
 
         abort_if($entry === null, 404);
 
@@ -64,8 +75,15 @@ class EntryController extends Controller
         $collection = $this->registry->get($slug);
 
         abort_if($collection === null, 404, "Unknown collection [{$slug}]");
-        abort_unless($collection->allows($operation, $request->user()), 403);
+
+        $user = $request->user('sanctum');
+        abort_unless($collection->allows($operation, $user), $user ? 403 : 401);
 
         return $collection;
+    }
+
+    protected function guestFilters(Request $request, Collection $collection): array
+    {
+        return $request->user('sanctum') ? [] : $collection->guestFilters();
     }
 }

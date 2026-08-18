@@ -28,6 +28,21 @@ abstract class Collection
         return [];
     }
 
+    /**
+     * Filters forced onto every read for unauthenticated requests,
+     * e.g. ['status' => 'published']. Ignored for authenticated users.
+     */
+    public function guestFilters(): array
+    {
+        return [];
+    }
+
+    /** URL template for the admin live preview, e.g. "http://localhost:3001/posts/{slug}". */
+    public function previewUrl(): ?string
+    {
+        return null;
+    }
+
     public function slug(): string
     {
         return $this->slug !== '' ? $this->slug : Str::of(class_basename(static::class))->snake('-')->toString();
@@ -90,6 +105,7 @@ abstract class Collection
             'labelPlural' => $this->labelPlural(),
             'titleField' => $this->titleField(),
             'defaultSort' => $this->defaultSort(),
+            'previewUrl' => $this->previewUrl(),
             'fields' => array_map(fn (Field $f) => $f->toSchema() + ['column' => $f->column()], $this->fields()),
             'relationships' => collect($this->fields())
                 ->whereInstanceOf(Relationship::class)
