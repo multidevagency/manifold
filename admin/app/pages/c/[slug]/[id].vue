@@ -13,7 +13,27 @@ const { data: entry } = await useAsyncData(
 const formRef = ref()
 const showPreview = ref(false)
 const showJson = ref(false)
+const copied = ref(false)
 const entryJson = computed(() => JSON.stringify(entry.value, null, 2))
+
+const highlightedJson = computed(() =>
+  entryJson.value
+    .replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]!)
+    .replace(
+      /("(?:[^"\\]|\\.)*")(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d+)?/g,
+      (match, str, colon, keyword) => {
+        if (str) return colon ? `<span class="j-key">${str}</span>${colon}` : `<span class="j-str">${str}</span>`
+        if (keyword) return `<span class="j-bool">${keyword}</span>`
+        return `<span class="j-num">${match}</span>`
+      },
+    ),
+)
+
+async function copyJson() {
+  await navigator.clipboard.writeText(entryJson.value)
+  copied.value = true
+  setTimeout(() => (copied.value = false), 1500)
+}
 const previewNonce = ref(0)
 
 const previewSrc = computed(() => {
@@ -35,7 +55,7 @@ async function destroy() {
 </script>
 
 <template>
-  <div v-if="collection && entry" class="rise mx-auto flex gap-8" :class="showPreview ? 'max-w-none' : 'max-w-4xl'">
+  <div v-if="collection && entry" class="rise mx-auto flex gap-8" :class="showPreview || showJson ? 'max-w-none' : 'max-w-4xl'">
     <div class="min-w-0 flex-1">
       <div class="mb-6">
         <NuxtLink :to="`/c/${collection.slug}`" class="mono-tag text-ink-soft hover:text-accent">← {{ collection.labelPlural }}</NuxtLink>
@@ -96,13 +116,23 @@ async function destroy() {
         </ConfirmDialog>
       </div>
     </aside>
-    <div v-if="showJson" class="min-w-0 flex-1">
+    <div v-if="showJson" class="min-w-0 flex-[1.4]">
       <div class="sticky top-8">
-        <p class="mono-tag mb-2 text-ink-soft">GET /api/manifold/{{ collection.slug }}/{{ entry.id }}</p>
+        <div class="mb-2 flex items-center justify-between">
+          <p class="mono-tag text-ink-soft">GET /api/manifold/{{ collection.slug }}/{{ entry.id }}</p>
+          <button
+            class="mono-tag border border-line-strong bg-panel px-3 py-1.5 transition-colors hover:bg-accent-soft"
+            :class="{ 'border-accent text-accent': copied }"
+            @click="copyJson"
+          >
+            {{ copied ? 'Copied ✓' : 'Copy JSON' }}
+          </button>
+        </div>
         <pre
-          class="h-[80vh] overflow-auto border-2 border-line-strong bg-ink p-5 font-mono text-[13px] leading-relaxed text-paper"
+          class="h-[80vh] overflow-auto border-2 border-line-strong bg-ink p-6 font-mono text-[13.5px] leading-[1.7] text-paper"
           style="box-shadow: 6px 6px 0 0 var(--color-accent)"
-        >{{ entryJson }}</pre>
+          v-html="highlightedJson"
+        />
       </div>
     </div>
 
@@ -121,3 +151,10 @@ async function destroy() {
     </div>
   </div>
 </template>
+
+<style>
+.j-key { color: #f7b955; }
+.j-str { color: #8fd4a8; }
+.j-num { color: #7cb8f2; }
+.j-bool { color: #e8490f; font-weight: 600; }
+</style>

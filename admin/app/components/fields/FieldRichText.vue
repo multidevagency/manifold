@@ -2,7 +2,8 @@
 import type { FieldSchema } from '~/composables/useSchema'
 import FieldShell from '~/components/fields/FieldShell.vue'
 
-defineProps<{ field: FieldSchema; error?: string }>()
+defineProps<{ field: FieldSchema; error?: string; ai?: boolean; generating?: boolean }>()
+const emit = defineEmits<{ generate: [] }>()
 const model = defineModel<string | null>()
 const editor = ref<HTMLElement>()
 
@@ -24,7 +25,7 @@ function exec(command: string, arg?: string) {
 </script>
 
 <template>
-  <FieldShell :field="field" :error="error">
+  <FieldShell :field="field" :error="error" :ai="ai" :generating="generating" @generate="emit('generate')">
     <div class="border border-line-strong bg-panel focus-within:border-accent" style="transition: box-shadow 0.15s"
       :style="{ boxShadow: 'var(--rt-shadow, none)' }">
       <div class="flex gap-1 border-b border-line px-2 py-1.5">

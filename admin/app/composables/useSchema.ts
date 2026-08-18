@@ -35,5 +35,10 @@ export const useSchema = () => {
 
   const get = (slug: string) => collections.value.find(c => c.slug === slug)
 
-  return { collections, load, get }
+  const refresh = async () => {
+    const res = await useApi()<{ collections: CollectionSchema[] }>('/api/manifold/schema')
+    collections.value = res.collections
+  }
+
+  return { collections, load, get, refresh }
 }

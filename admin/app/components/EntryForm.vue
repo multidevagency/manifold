@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import type { CollectionSchema, FieldSchema } from '~/composables/useSchema'
-import FieldText from '~/components/fields/FieldText.vue'
-import FieldNumber from '~/components/fields/FieldNumber.vue'
-import FieldTextarea from '~/components/fields/FieldTextarea.vue'
-import FieldRichText from '~/components/fields/FieldRichText.vue'
-import FieldSelect from '~/components/fields/FieldSelect.vue'
-import FieldBoolean from '~/components/fields/FieldBoolean.vue'
-import FieldDateTime from '~/components/fields/FieldDateTime.vue'
-import FieldRelationship from '~/components/fields/FieldRelationship.vue'
+import FieldRenderer from '~/components/fields/FieldRenderer.vue'
 
 const props = defineProps<{ collection: CollectionSchema; entry?: Record<string, any> }>()
 const emit = defineEmits<{ saved: [entry: Record<string, any>] }>()
@@ -17,24 +10,35 @@ const form = reactive<Record<string, any>>({})
 const errors = ref<Record<string, string[]>>({})
 const busy = ref(false)
 const savedFlash = ref(false)
+const generating = ref<string | null>(null)
 
-for (const f of props.collection.fields) {
+const AI_TYPES = ['textarea', 'richtext']
+const LAYOUT_TYPES = ['tabs', 'tab', 'row', 'collapsible', 'ui']
+
+function columnFields(fields: any[]): any[] {
+  return fields.flatMap((f) =>
+    LAYOUT_TYPES.includes(f.type) ? columnFields(f.children ?? []) : f.type === 'join' ? [] : [f],
+  )
+}
+
+for (const f of columnFields(props.collection.fields)) {
   form[f.column] = props.entry?.[f.column] ?? f.default ?? null
 }
 
-const componentFor = (f: FieldSchema) =>
-  ({
-    text: FieldText,
-    email: FieldText,
-    slug: FieldText,
-    number: FieldNumber,
-    textarea: FieldTextarea,
-    richtext: FieldRichText,
-    select: FieldSelect,
-    boolean: FieldBoolean,
-    datetime: FieldDateTime,
-    relationship: FieldRelationship,
-  })[f.type] ?? FieldText
+async function generate(f: FieldSchema) {
+  generating.value = f.column
+  try {
+    const res = await api<{ data: { text: string } }>('/api/manifold/ai/generate', {
+      method: 'POST',
+      body: { collection: props.collection.slug, field: f.name, context: form },
+    })
+    form[f.column] = res.data.text
+  } catch (e: any) {
+    errors.value = { [f.column]: [e?.data?.message ?? 'AI generation failed'] }
+  } finally {
+    generating.value = null
+  }
+}
 
 async function save() {
   busy.value = true
@@ -63,15 +67,39 @@ defineExpose({ save, busy, savedFlash })
       {{ errors._[0] }}
     </p>
 
-    <component
-      :is="componentFor(f)"
+    <FieldRenderer
       v-for="(f, i) in collection.fields"
       :key="f.column"
       v-model="form[f.column]"
       :field="f"
       :error="errors[f.column]?.[0]"
+      :ai="AI_TYPES.includes(f.type)"
+      :generating="generating === f.column"
+      :entry-id="entry?.id"
       class="rise"
-      :style="{ animationDelay: `${i * 40}ms` }"
-    />
+      :style="{ animationDelay: `${Math.min(i, 8) * 40}ms` }"
+      @generate="generate"
+    >
+      <template #child="{ child }">
+        <FieldRenderer
+          v-model="form[child.column]"
+          :field="child"
+          :error="errors[child.column]?.[0]"
+          :ai="AI_TYPES.includes(child.type)"
+          :generating="generating === child.column"
+          :entry-id="entry?.id"
+          @generate="generate"
+        >
+          <template #child="{ child: nested }">
+            <FieldRenderer
+              v-model="form[nested.column]"
+              :field="nested"
+              :error="errors[nested.column]?.[0]"
+              :entry-id="entry?.id"
+            />
+          </template>
+        </FieldRenderer>
+      </template>
+    </FieldRenderer>
   </form>
 </template>

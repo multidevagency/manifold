@@ -62,12 +62,15 @@ async function destroy(row: any) {
           <span class="align-top text-base font-bold text-accent">{{ meta.total }}</span>
         </h1>
       </div>
-      <NuxtLink
-        :to="`/c/${collection.slug}/new`"
-        class="bg-ink px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-paper transition-colors hover:bg-accent"
-      >
-        + New {{ collection.labelSingular }}
-      </NuxtLink>
+      <div class="flex items-center gap-3">
+        <AddFieldDialog :collection="collection" @added="fetchRows" />
+        <NuxtLink
+          :to="`/c/${collection.slug}/new`"
+          class="bg-ink px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-paper transition-colors hover:bg-accent"
+        >
+          + New {{ collection.labelSingular }}
+        </NuxtLink>
+      </div>
     </div>
 
     <input

@@ -67,7 +67,7 @@ class EntryRepository
 
     public function create(Collection $collection, array $input): array
     {
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             if ($field->hasDefault() && ! array_key_exists($field->column(), $input) && ! array_key_exists($field->name(), $input)) {
                 $input[$field->column()] = $field->defaultValue();
             }
@@ -100,7 +100,7 @@ class EntryRepository
 
     protected function validate(Collection $collection, array $input, bool $updating, ?int $ignoreId = null): array
     {
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             if ($field->column() !== $field->name()
                 && array_key_exists($field->name(), $input)
                 && ! array_key_exists($field->column(), $input)) {
@@ -111,7 +111,7 @@ class EntryRepository
 
         $rules = [];
 
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             $fieldRules = $field->validationRules($updating);
 
             if ($field->isUnique()) {
@@ -128,12 +128,12 @@ class EntryRepository
 
         $data = Validator::make($input, $updating ? array_intersect_key($rules, $input) : $rules)->validate();
 
-        return array_intersect_key($data, array_flip(array_map(fn ($f) => $f->column(), $collection->fields())));
+        return array_intersect_key($data, array_flip(array_map(fn ($f) => $f->column(), $collection->columnFields())));
     }
 
     protected function prepare(Collection $collection, array $data, ?int $existingId = null): array
     {
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             $column = $field->column();
 
             if ($field instanceof Slug) {
@@ -166,7 +166,7 @@ class EntryRepository
 
     protected function serialize(Collection $collection, array $row): array
     {
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             $column = $field->column();
             if (array_key_exists($column, $row)) {
                 $row[$column] = $field->fromDatabase($row[$column]);

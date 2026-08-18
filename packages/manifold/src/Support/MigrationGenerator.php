@@ -11,7 +11,7 @@ class MigrationGenerator
         $table = $collection->table();
         $lines = ['$table->id();'];
 
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             $lines[] = $field->columnStatement().';';
         }
 
@@ -55,7 +55,7 @@ class MigrationGenerator
         }
 
         foreach ($diff['add'] as $field) {
-            $up[] = $field->columnStatement().';';
+            $up[] = $field->columnStatement(forceNullable: true).';';
             $down[] = "\$table->dropColumn('{$field->column()}');";
         }
 

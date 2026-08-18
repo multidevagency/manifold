@@ -64,6 +64,39 @@ class DatabaseSeeder extends Seeder
                 'content' => '<h1>'.$title.'</h1><p>Demo page content.</p>',
                 'status' => $status,
                 'meta_title' => $title.' — Manifold Demo',
+                'hero' => json_encode(['heading' => $title, 'subheading' => 'A demo page built with the layout builder.', 'image' => null]),
+                'layout' => json_encode([
+                    ['blockType' => 'content', 'body' => '<p>This layout was assembled from blocks in the admin.</p>'],
+                    ['blockType' => 'cta', 'label' => 'Read the blog', 'url' => '/'],
+                ]),
+                'faq' => json_encode([
+                    ['question' => 'What renders this page?', 'answer' => 'The Next.js example, from block data served by Manifold.'],
+                ]),
+                'created_at' => $now,
+                'updated_at' => $now,
+            ]);
+        }
+
+        $products = [
+            ['Field Notes Notebook', 12.50, 'stationery'],
+            ['Schematic Poster A1', 29.00, 'print'],
+            ['Manifold Mug', 18.00, 'goods'],
+            ['Blueprint Desk Mat', 39.00, 'goods'],
+        ];
+
+        foreach ($products as $i => [$title, $price, $kind]) {
+            DB::table('mf_products')->insert([
+                'title' => $title,
+                'slug' => str($title)->slug(),
+                'excerpt' => 'Demo product — '.$kind.'.',
+                'description' => '<p>'.$title.' from the Manifold demo shop.</p>',
+                'price' => $price,
+                'status' => 'published',
+                'in_stock' => true,
+                'variants' => json_encode($i === 0 ? [
+                    ['name' => 'Dot grid', 'sku' => 'FN-DOT', 'price' => null, 'in_stock' => true],
+                    ['name' => 'Ruled', 'sku' => 'FN-RUL', 'price' => 13.50, 'in_stock' => false],
+                ] : []),
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);

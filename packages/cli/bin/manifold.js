@@ -32,8 +32,40 @@ async function api(method, path, body) {
 
 const TS_TYPES = {
   text: 'string', slug: 'string', email: 'string', textarea: 'string',
-  richtext: 'string', datetime: 'string', number: 'number', boolean: 'boolean',
-  relationship: 'number',
+  richtext: 'string', datetime: 'string', date: 'string', code: 'string',
+  number: 'number', boolean: 'boolean', relationship: 'number',
+  json: 'unknown', point: '{ lat: number; lng: number }',
+  upload: '{ path: string; url: string }',
+}
+
+const LAYOUT_TYPES = ['tabs', 'tab', 'row', 'collapsible', 'ui']
+
+function columnFields(fields) {
+  return fields.flatMap((f) =>
+    LAYOUT_TYPES.includes(f.type) ? columnFields(f.children ?? [])
+    : f.type === 'join' ? []
+    : [f],
+  )
+}
+
+function fieldType(f) {
+  if (f.type === 'select' || f.type === 'radio') {
+    return Object.keys(f.options ?? {}).map((o) => JSON.stringify(o)).join(' | ') || 'string'
+  }
+  if (f.type === 'group') return objectShape(f.children ?? [])
+  if (f.type === 'array') return `Array<${objectShape(f.children ?? [])}>`
+  if (f.type === 'blocks') {
+    const shapes = Object.entries(f.blocks ?? {}).map(
+      ([name, fields]) => `({ blockType: ${JSON.stringify(name)} } & ${objectShape(fields)})`,
+    )
+    return shapes.length ? `Array<${shapes.join(' | ')}>` : 'Array<{ blockType: string }>'
+  }
+  return TS_TYPES[f.type] ?? 'unknown'
+}
+
+function objectShape(fields) {
+  const props = columnFields(fields).map((f) => `${f.column}: ${fieldType(f)}${f.required ? '' : ' | null'}`)
+  return `{ ${props.join('; ')} }`
 }
 
 function pascal(slug) {
@@ -46,11 +78,8 @@ async function typesCommand() {
 
   for (const col of collections) {
     out += `export interface ${pascal(col.slug)} {\n  id: number\n`
-    for (const f of col.fields) {
-      const ts = f.type === 'select'
-        ? Object.keys(f.options ?? {}).map((o) => JSON.stringify(o)).join(' | ') || 'string'
-        : TS_TYPES[f.type] ?? 'unknown'
-      out += `  ${f.column}: ${ts}${f.required ? '' : ' | null'}\n`
+    for (const f of columnFields(col.fields)) {
+      out += `  ${f.column}: ${fieldType(f)}${f.required ? '' : ' | null'}\n`
     }
     out += `  created_at: string\n  updated_at: string\n}\n\n`
   }

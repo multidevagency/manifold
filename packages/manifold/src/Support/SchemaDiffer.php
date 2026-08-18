@@ -27,7 +27,7 @@ class SchemaDiffer
         $change = [];
         $seen = $reserved;
 
-        foreach ($collection->fields() as $field) {
+        foreach ($collection->columnFields() as $field) {
             $column = $field->column();
             $seen[] = $column;
 
@@ -69,6 +69,8 @@ class SchemaDiffer
             'tinyint' => ['tinyint', 'integer', 'int', 'boolean'],
             'decimal' => ['decimal', 'numeric', 'float', 'double'],
             'datetime' => ['datetime', 'timestamp'],
+            'date' => ['date', 'datetime'],
+            'json' => ['json', 'jsonb', 'text', 'longtext'],
         ];
 
         return in_array(strtolower($actual), $families[$wanted] ?? [$wanted], true);

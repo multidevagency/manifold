@@ -70,7 +70,7 @@ abstract class Collection
 
     public function titleField(): ?string
     {
-        foreach ($this->fields() as $field) {
+        foreach ($this->columnFields() as $field) {
             if ($field->isUsedAsTitle()) {
                 return $field->column();
             }
@@ -79,9 +79,27 @@ abstract class Collection
         return null;
     }
 
+    /** Fields that own a database column, with layout containers flattened away. */
+    public function columnFields(): array
+    {
+        $flat = [];
+        $walk = function (array $fields) use (&$flat, &$walk) {
+            foreach ($fields as $field) {
+                if ($field->hasColumn()) {
+                    $flat[] = $field;
+                } else {
+                    $walk($field->children());
+                }
+            }
+        };
+        $walk($this->fields());
+
+        return $flat;
+    }
+
     public function field(string $name): ?Field
     {
-        foreach ($this->fields() as $field) {
+        foreach ($this->columnFields() as $field) {
             if ($field->name() === $name || $field->column() === $name) {
                 return $field;
             }

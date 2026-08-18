@@ -39,7 +39,7 @@ class ManifoldApiTest extends TestCase
 
     public function test_guests_cannot_read_collections_without_public_access(): void
     {
-        $this->getJson('/api/manifold/pages')->assertUnauthorized();
+        $this->getJson('/api/manifold/authors')->assertUnauthorized();
     }
 
     public function test_guests_only_see_entries_matching_guest_filters(): void

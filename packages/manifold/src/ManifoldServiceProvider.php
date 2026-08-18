@@ -24,8 +24,8 @@ class ManifoldServiceProvider extends ServiceProvider
             ->middleware('api')
             ->group(__DIR__.'/../routes/manifold.php');
 
-        if ($this->app->runningInConsole()) {
-            $this->commands([MigrateCommand::class, MakeCollectionCommand::class]);
-        }
+        // Registered outside the console too: the schema-edit endpoints
+        // run manifold:migrate via Artisan::call inside an HTTP request.
+        $this->commands([MigrateCommand::class, MakeCollectionCommand::class]);
     }
 }

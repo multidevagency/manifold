@@ -6,6 +6,7 @@ use Manifold\Cms\Collections\Collection;
 use Manifold\Cms\Fields\Boolean;
 use Manifold\Cms\Fields\DateTime;
 use Manifold\Cms\Fields\Number;
+use Manifold\Cms\Fields\Presets\Seo;
 use Manifold\Cms\Fields\Relationship;
 use Manifold\Cms\Fields\RichText;
 use Manifold\Cms\Fields\Select;
@@ -31,6 +32,8 @@ class Posts extends Collection
             Boolean::make('featured'),
             Number::make('reading_time')->label('Reading time (min)'),
             DateTime::make('published_at')->index(),
+            Relationship::make('author')->to('authors'),
+            ...Seo::fields(),
         ];
     }
 

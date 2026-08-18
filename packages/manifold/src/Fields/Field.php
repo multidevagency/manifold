@@ -136,17 +136,34 @@ abstract class Field
         return $this->default;
     }
 
+    /** False for layout containers and virtual fields (Join): nothing in the DB. */
+    public function hasColumn(): bool
+    {
+        return true;
+    }
+
+    /** @return Field[] nested fields, for layout containers and JSON containers */
+    public function children(): array
+    {
+        return [];
+    }
+
     abstract public function type(): string;
 
     /** Base SQL type as reported by Schema::getColumns(), used for change detection. */
     abstract public function sqlType(): string;
 
-    /** Migration builder statements for a generated migration file. */
-    public function columnStatement(): string
+    /**
+     * Migration builder statements for a generated migration file.
+     * $forceNullable: adding a NOT NULL column without a default fails on
+     * populated tables, so column additions stay nullable and requiredness
+     * is enforced by validation instead.
+     */
+    public function columnStatement(bool $forceNullable = false): string
     {
         $stmt = $this->baseStatement();
 
-        if (! $this->required) {
+        if (! $this->required || ($forceNullable && ! $this->hasDefault)) {
             $stmt .= '->nullable()';
         }
         if ($this->hasDefault) {
@@ -192,7 +209,7 @@ abstract class Field
 
     public function toSchema(): array
     {
-        return array_filter([
+        $schema = array_filter([
             'name' => $this->name,
             'type' => $this->type(),
             'label' => $this->label ?? str($this->name)->headline()->toString(),
@@ -202,5 +219,11 @@ abstract class Field
             'default' => $this->hasDefault ? $this->default : null,
             'help' => $this->help,
         ], fn ($v) => $v !== null && $v !== false);
+
+        if ($this->children()) {
+            $schema['children'] = array_map(fn (Field $f) => $f->toSchema() + ['column' => $f->column()], $this->children());
+        }
+
+        return $schema;
     }
 }

@@ -34,6 +34,10 @@ watch(token, v => { if (v) load().catch(() => {}) })
             :class="route.params.slug === c.slug ? 'text-accent' : 'text-ink-soft group-hover:text-accent'"
           >/{{ c.slug }}</span>
         </NuxtLink>
+
+        <div class="mt-3 border-t border-line pt-3">
+          <NewCollectionDialog />
+        </div>
       </nav>
 
       <div class="border-t-2 border-line-strong px-5 py-4">

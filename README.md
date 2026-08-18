@@ -129,13 +129,30 @@ RichText::make('content')->renamedFrom('body'),
 
 which generates `renameColumn('body', 'content')` instead of destroying data.
 
-## Field types
+## Field types — full Payload-style surface
 
-`Text` · `Textarea` · `RichText` · `Slug` (auto-generated, uniqueness-suffixed) ·
-`Email` · `Number` · `Boolean` · `Select` · `DateTime` · `Relationship`
+**Data:** `Text` · `Textarea` · `RichText` · `Code` · `Email` · `Slug` ·
+`Number` · `Boolean` · `Select` · `Radio` · `DateTime` · `Date` · `Json` ·
+`Point` · `Upload` · `Relationship` · `Join` (virtual reverse relation)
 
-All fields support `required()`, `unique()`, `index()`, `default()`, `label()`,
-`help()`, `rules()` (extra Laravel validation rules), and `renamedFrom()`.
+**Containers (JSON):** `Group` · `ArrayField` · `Blocks` (discriminated by
+`blockType`, validated server-side)
+
+**Layout (admin-only, no columns):** `Tabs` · `Row` · `Collapsible` · `Ui`
+
+All data fields support `required()`, `unique()`, `index()`, `default()`,
+`label()`, `help()`, `rules()`, and `renamedFrom()`. The full reference lives in
+the **[documentation site](docs-site/)** (`cd docs-site && pnpm dev`).
+
+## Admin superpowers
+
+- **Live preview** — `previewUrl()` renders any frontend beside the edit form,
+  drafts included via a server-side token
+- **View as JSON** — syntax-highlighted API output with copy-to-clipboard
+- **✨ AI generation** — Claude writes excerpts, bodies, and meta descriptions
+  from the entry's context (`ANTHROPIC_API_KEY` in `.env`, server-side only)
+- **Schema editing from the UI** *(local env only)* — create collections and
+  add fields; the admin writes the same PHP class you would, then migrates
 
 ## API
 
@@ -231,7 +248,8 @@ packages/cli/               @manifold-cms/cli — types / export / import / init
 
 app/Collections/            your collections (the only code you write)
 admin/                      Nuxt 4 admin (schema-driven, Reka UI primitives, Tailwind v4)
-examples/nextjs-blog/       Next.js frontend consuming the API, with draft preview
+examples/nextjs-blog/       Next.js frontend: blog, shop, layout-builder pages, draft preview
+docs-site/                  VitePress documentation site
 ```
 
 Design decisions worth knowing:
@@ -251,22 +269,25 @@ Design decisions worth knowing:
 php artisan test
 ```
 
-20 feature tests cover auth, CRUD, validation, defaults, slug generation and
+26 feature tests cover auth, CRUD, validation, defaults, slug generation and
 collision suffixing, relationship key normalization, filtering, search,
-pagination, access control, guest-filter scoping, and the schema differ
-(create / add / drop / rename detection).
+pagination, access control, guest-filter scoping, container fields
+(group/array/blocks round-trips, blockType validation, upload serialization,
+layout flattening), and the schema differ (create / add / drop / rename).
 
 ## Roadmap
 
 Honest list of what a production release still needs:
 
-- [ ] `Upload` field + media library
-- [ ] Array / block fields (child tables)
-- [ ] Draft & publish versioning
+- [ ] Media library (uploads work; browsing/reuse doesn't yet)
+- [ ] Child-table storage option for `ArrayField`/`Blocks` (today: JSON columns)
+- [ ] Ecommerce transactions: carts, Stripe/Mollie checkout with verified
+      webhooks, orders (the `Products` + variants modeling layer exists)
+- [ ] Draft & publish versioning, scheduled publishing
 - [ ] Localization
-- [ ] Column `->change()` coverage for more type transitions
 - [ ] Roles beyond "authenticated user" in the demo collections
-- [ ] Extract `packages/manifold` to a standalone Composer package
+- [ ] Extract `packages/manifold` to a standalone Composer package; publish the
+      JS packages to npm
 
 ## License
 
