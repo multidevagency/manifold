@@ -24,21 +24,29 @@ export interface CollectionSchema {
   relationships: Record<string, string>
 }
 
+export interface GlobalSchema {
+  slug: string
+  label: string
+  fields: FieldSchema[]
+}
+
 export const useSchema = () => {
   const collections = useState<CollectionSchema[]>('mf.schema', () => [])
+  const globals = useState<GlobalSchema[]>('mf.globals', () => [])
+
+  const refresh = async () => {
+    const res = await useApi()<{ collections: CollectionSchema[]; globals: GlobalSchema[] }>('/api/manifold/schema')
+    collections.value = res.collections
+    globals.value = res.globals ?? []
+  }
 
   const load = async () => {
     if (collections.value.length) return
-    const res = await useApi()<{ collections: CollectionSchema[] }>('/api/manifold/schema')
-    collections.value = res.collections
+    await refresh()
   }
 
   const get = (slug: string) => collections.value.find(c => c.slug === slug)
+  const getGlobal = (slug: string) => globals.value.find(g => g.slug === slug)
 
-  const refresh = async () => {
-    const res = await useApi()<{ collections: CollectionSchema[] }>('/api/manifold/schema')
-    collections.value = res.collections
-  }
-
-  return { collections, load, get, refresh }
+  return { collections, globals, load, get, getGlobal, refresh }
 }

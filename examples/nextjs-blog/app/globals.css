@@ -1,0 +1,119 @@
+:root {
+  --paper: #f2efe6;
+  --panel: #faf8f2;
+  --ink: #191712;
+  --ink-soft: #6b6657;
+  --line: #d9d4c4;
+  --accent: #e8490f;
+  --accent-soft: #fbe0d4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+}
+
+a { color: inherit; }
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  font-family: system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.brand span { color: var(--accent); }
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.site-nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+main.page { padding: 3rem 0 5rem; }
+
+.site-footer {
+  border-top: 3px solid var(--ink);
+  background: var(--panel);
+  padding: 2.5rem 0;
+  font-size: 0.95rem;
+}
+
+.site-footer .inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.site-footer nav { display: flex; gap: 1.5rem; }
+.site-footer a { color: var(--ink-soft); }
+.site-footer a:hover { color: var(--accent); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 2px solid var(--ink);
+  background: var(--panel);
+  padding: 1rem;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--accent);
+}
+
+h1 { font-family: system-ui, sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+h2 { font-family: system-ui, sans-serif; font-weight: 800; }

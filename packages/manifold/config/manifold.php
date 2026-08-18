@@ -7,6 +7,11 @@ return [
         // App\Collections\Posts::class,
     ],
 
+    // Single-instance documents (header, footer, settings).
+    'globals' => [
+        // App\Globals\Header::class,
+    ],
+
     'route_prefix' => 'api/manifold',
 
     // Server-side only. Never expose to the browser.

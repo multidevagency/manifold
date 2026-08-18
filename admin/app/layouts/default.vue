@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { collections, load } = useSchema()
+const { collections, globals, load } = useSchema()
 const { token, user, logout } = useAuth()
 const route = useRoute()
 
@@ -63,6 +63,29 @@ watch(token, v => { if (v) load().catch(() => {}) })
             >/{{ c.slug }}</span>
           </template>
         </NuxtLink>
+
+        <template v-if="globals.length">
+          <p v-if="!collapsed" class="mono-tag mt-4 px-5 pb-2 text-ink-soft">Globals</p>
+          <NuxtLink
+            v-for="g in globals"
+            :key="g.slug"
+            :to="`/g/${g.slug}`"
+            class="group flex items-center py-2 text-[15px] font-semibold transition-colors hover:bg-accent-soft"
+            :class="[
+              collapsed ? 'justify-center' : 'justify-between px-5',
+              route.params.global === g.slug ? 'bg-ink text-paper hover:bg-ink' : '',
+            ]"
+            :title="g.label"
+          >
+            <template v-if="collapsed">
+              <span class="font-mono text-sm font-bold">{{ g.label.slice(0, 2) }}</span>
+            </template>
+            <template v-else>
+              {{ g.label }}
+              <span class="mono-tag text-ink-soft group-hover:text-accent">◎</span>
+            </template>
+          </NuxtLink>
+        </template>
 
         <div v-if="!collapsed" class="mt-3 border-t border-line pt-3">
           <NewCollectionDialog />

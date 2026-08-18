@@ -15,6 +15,9 @@ class SchemaController extends Controller
             'collections' => collect($registry->all())
                 ->map(fn (Collection $c) => $c->toSchema())
                 ->values(),
+            'globals' => collect($registry->allGlobals())
+                ->map(fn ($g) => $g->toSchema())
+                ->values(),
         ]);
     }
 }

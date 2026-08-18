@@ -47,6 +47,13 @@ export function createClient({ url, token = null, fetch: fetchImpl = globalThis.
 
     schema: () => request('GET', 'schema'),
 
+    global(slug) {
+      return {
+        get: () => request('GET', `globals/${slug}`).then((r) => r.data),
+        update: (data) => request('PATCH', `globals/${slug}`, { body: data }).then((r) => r.data),
+      }
+    },
+
     collection(slug) {
       return {
         list: (params = {}) => request('GET', slug, { params }),

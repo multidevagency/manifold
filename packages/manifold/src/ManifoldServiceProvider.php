@@ -13,7 +13,7 @@ class ManifoldServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/manifold.php', 'manifold');
 
-        $this->app->singleton(Registry::class, fn () => new Registry(config('manifold.collections', [])));
+        $this->app->singleton(Registry::class, fn () => new Registry(config('manifold.collections', []), config('manifold.globals', [])));
     }
 
     public function boot(): void

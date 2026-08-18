@@ -77,6 +77,35 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        DB::table('mf_globals')->insert([
+            [
+                'slug' => 'header',
+                'data' => json_encode([
+                    'brand' => 'MANIFOLD',
+                    'nav' => [
+                        ['label' => 'Blog', 'url' => '/'],
+                        ['label' => 'Shop', 'url' => '/shop'],
+                        ['label' => 'About', 'url' => '/about'],
+                        ['label' => 'Contact', 'url' => '/contact'],
+                    ],
+                ]),
+                'created_at' => $now, 'updated_at' => $now,
+            ],
+            [
+                'slug' => 'footer',
+                'data' => json_encode([
+                    'tagline' => 'A demo site rendered by Next.js, managed by Manifold.',
+                    'links' => [
+                        ['label' => 'GitHub', 'url' => 'https://github.com/multidevagency/manifold'],
+                        ['label' => 'Admin', 'url' => 'http://localhost:3000'],
+                        ['label' => 'llms.txt', 'url' => '/llms.txt'],
+                    ],
+                    'copyright' => '© 2026 Manifold. MIT licensed.',
+                ]),
+                'created_at' => $now, 'updated_at' => $now,
+            ],
+        ]);
+
         $products = [
             ['Field Notes Notebook', 12.50, 'stationery'],
             ['Schematic Poster A1', 29.00, 'print'],

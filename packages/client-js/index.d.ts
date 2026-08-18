@@ -33,7 +33,11 @@ export interface ManifoldClient {
   readonly token: string | null
   setToken(token: string | null): void
   login(email: string, password: string): Promise<{ token: string; user: { id: number; name: string; email: string } }>
-  schema(): Promise<{ collections: unknown[] }>
+  schema(): Promise<{ collections: unknown[]; globals: unknown[] }>
+  global<T = Record<string, unknown>>(slug: string): {
+    get(): Promise<T>
+    update(data: Partial<T>): Promise<T>
+  }
   collection<T = Record<string, unknown>>(slug: string): CollectionApi<T>
 }
 

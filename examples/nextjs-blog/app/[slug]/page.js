@@ -34,7 +34,7 @@ export default async function Page({ params }) {
   if (!page || page.status !== 'published') notFound()
 
   return (
-    <main>
+    <>
       {page.hero?.heading && (
         <header style={{ borderBottom: '3px solid #191712', marginBottom: '2rem', paddingBottom: '1rem' }}>
           <h1 style={{ marginBottom: 0 }}>{page.hero.heading}</h1>
@@ -58,6 +58,6 @@ export default async function Page({ params }) {
           ))}
         </>
       )}
-    </main>
+    </>
   )
 }

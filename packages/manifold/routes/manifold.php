@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Manifold\Cms\Http\Controllers\AiController;
 use Manifold\Cms\Http\Controllers\AuthController;
 use Manifold\Cms\Http\Controllers\EntryController;
+use Manifold\Cms\Http\Controllers\GlobalController;
 use Manifold\Cms\Http\Controllers\SchemaController;
 use Manifold\Cms\Http\Controllers\SchemaEditController;
 use Manifold\Cms\Http\Controllers\UploadController;
@@ -19,6 +20,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // Guests reach these too; collection access() gates + guestFilters() decide what they see.
 Route::get('schema', SchemaController::class);
+Route::get('globals/{slug}', [GlobalController::class, 'show']);
+Route::patch('globals/{slug}', [GlobalController::class, 'update']);
 Route::post('schema/collections', [SchemaEditController::class, 'storeCollection']);
 Route::post('schema/collections/{collection}/fields', [SchemaEditController::class, 'storeField']);
 Route::get('{collection}', [EntryController::class, 'index']);

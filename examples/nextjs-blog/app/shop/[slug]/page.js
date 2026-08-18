@@ -12,7 +12,7 @@ export default async function ProductPage({ params }) {
   const variants = product.variants ?? []
 
   return (
-    <main>
+    <>
       <h1>{product.title}</h1>
       <p style={{ fontFamily: 'monospace', fontSize: '1.4rem' }}>€{Number(product.price).toFixed(2)}</p>
       {product.image && <img src={product.image.url} alt="" style={{ maxWidth: '100%' }} />}
@@ -35,6 +35,6 @@ export default async function ProductPage({ params }) {
           </table>
         </>
       )}
-    </main>
+    </>
   )
 }

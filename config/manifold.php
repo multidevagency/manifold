@@ -5,6 +5,8 @@ use App\Collections\Categories;
 use App\Collections\Pages;
 use App\Collections\Posts;
 use App\Collections\Products;
+use App\Globals\Footer;
+use App\Globals\Header;
 
 return [
 
@@ -14,6 +16,11 @@ return [
         Pages::class,
         Authors::class,
         Products::class,
+    ],
+
+    'globals' => [
+        Header::class,
+        Footer::class,
     ],
 
     'route_prefix' => 'api/manifold',
