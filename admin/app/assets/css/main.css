@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f2efe6;
+  --color-panel: #faf8f2;
+  --color-ink: #191712;
+  --color-ink-soft: #6b6657;
+  --color-line: #d9d4c4;
+  --color-line-strong: #191712;
+  --color-accent: #e8490f;
+  --color-accent-soft: #fbe0d4;
+  --color-ok: #22764a;
+  --color-warn: #b07708;
+
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  /* Blueprint grid: the admin is a schematic of the schema. */
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.field-input {
+  @apply w-full border border-line-strong bg-panel px-3.5 py-2.5 text-[15px] outline-none transition-shadow;
+}
+.field-input:focus {
+  box-shadow: 3px 3px 0 0 var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise {
+  animation: rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+button, a, input[type='checkbox'], select {
+  cursor: pointer;
+}
