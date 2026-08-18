@@ -55,8 +55,8 @@ async function destroy() {
 </script>
 
 <template>
-  <div v-if="collection && entry" class="rise mx-auto flex gap-8" :class="showPreview || showJson ? 'max-w-none' : 'max-w-4xl'">
-    <div class="min-w-0 flex-1">
+  <div v-if="collection && entry" class="rise mx-auto flex max-w-full gap-8" :class="showPreview || showJson ? '' : 'max-w-4xl'">
+    <div class="min-w-0 flex-1" :class="{ 'max-w-2xl': showPreview || showJson }">
       <div class="mb-6">
         <NuxtLink :to="`/c/${collection.slug}`" class="mono-tag text-ink-soft hover:text-accent">← {{ collection.labelPlural }}</NuxtLink>
         <h1 class="mt-1 truncate text-3xl font-black tracking-tight" style="font-stretch: 110%">
@@ -69,6 +69,39 @@ async function destroy() {
       </div>
     </div>
 
+    <div v-if="showJson" class="min-w-0 flex-1 pt-14">
+      <div class="sticky top-8">
+        <div class="mb-2 flex items-center justify-between">
+          <p class="mono-tag text-ink-soft">GET /api/manifold/{{ collection.slug }}/{{ entry.id }}</p>
+          <button
+            class="mono-tag border border-line-strong bg-panel px-3 py-1.5 transition-colors hover:bg-accent-soft"
+            :class="{ 'border-accent text-accent': copied }"
+            @click="copyJson"
+          >
+            {{ copied ? 'Copied ✓' : 'Copy JSON' }}
+          </button>
+        </div>
+        <pre
+          class="h-[80vh] overflow-auto whitespace-pre-wrap break-words border-2 border-line-strong bg-ink p-6 font-mono text-[13.5px] leading-[1.7] text-paper"
+          style="box-shadow: 6px 6px 0 0 var(--color-accent)"
+          v-html="highlightedJson"
+        />
+      </div>
+    </div>
+
+    <div v-if="showPreview && previewSrc" class="min-w-0 flex-1 pt-14">
+      <div class="sticky top-8">
+        <div class="mb-2 flex items-center justify-between">
+          <span class="mono-tag text-ink-soft">{{ previewSrc.split('?')[0] }}</span>
+          <button class="mono-tag text-ink-soft hover:text-accent" @click="previewNonce++">↻ refresh</button>
+        </div>
+        <iframe
+          :src="previewSrc"
+          class="h-[80vh] w-full border-2 border-line-strong bg-white"
+          style="box-shadow: 6px 6px 0 0 var(--color-ink)"
+        />
+      </div>
+    </div>
     <aside class="w-52 shrink-0 pt-14">
       <div class="sticky top-8 space-y-5">
         <button
@@ -116,39 +149,6 @@ async function destroy() {
         </ConfirmDialog>
       </div>
     </aside>
-    <div v-if="showJson" class="min-w-0 flex-[1.4]">
-      <div class="sticky top-8">
-        <div class="mb-2 flex items-center justify-between">
-          <p class="mono-tag text-ink-soft">GET /api/manifold/{{ collection.slug }}/{{ entry.id }}</p>
-          <button
-            class="mono-tag border border-line-strong bg-panel px-3 py-1.5 transition-colors hover:bg-accent-soft"
-            :class="{ 'border-accent text-accent': copied }"
-            @click="copyJson"
-          >
-            {{ copied ? 'Copied ✓' : 'Copy JSON' }}
-          </button>
-        </div>
-        <pre
-          class="h-[80vh] overflow-auto border-2 border-line-strong bg-ink p-6 font-mono text-[13.5px] leading-[1.7] text-paper"
-          style="box-shadow: 6px 6px 0 0 var(--color-accent)"
-          v-html="highlightedJson"
-        />
-      </div>
-    </div>
-
-    <div v-if="showPreview && previewSrc" class="min-w-0 flex-1">
-      <div class="sticky top-8">
-        <div class="mb-2 flex items-center justify-between">
-          <span class="mono-tag text-ink-soft">{{ previewSrc.split('?')[0] }}</span>
-          <button class="mono-tag text-ink-soft hover:text-accent" @click="previewNonce++">↻ refresh</button>
-        </div>
-        <iframe
-          :src="previewSrc"
-          class="h-[80vh] w-full border-2 border-line-strong bg-white"
-          style="box-shadow: 6px 6px 0 0 var(--color-ink)"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
