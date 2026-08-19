@@ -12,7 +12,7 @@ The repo ships a complete Next.js App Router example in `examples/nextjs-blog`:
 ```bash
 cd examples/nextjs-blog
 cp .env.example .env.local
-pnpm install && pnpm dev   # http://localhost:3001
+pnpm install && pnpm dev   # http://localhost:3002
 ```
 
 The same pattern works in Nuxt, SvelteKit, Astro, or plain fetch — the example's `lib/manifold.js` is ~10 lines.

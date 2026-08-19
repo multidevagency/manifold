@@ -43,7 +43,7 @@ Reload the admin: the field is in the form, the column is in the table, the API 
 ```bash
 # Frontend example with shop, layout-builder pages, and draft preview
 cd examples/nextjs-blog
-cp .env.example .env.local && pnpm install && pnpm dev   # :3001
+cp .env.example .env.local && pnpm install && pnpm dev   # :3002
 
 # AI content generation in the admin
 echo 'ANTHROPIC_API_KEY=sk-ant-your-key' >> .env

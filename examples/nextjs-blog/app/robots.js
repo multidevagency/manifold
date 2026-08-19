@@ -1,4 +1,4 @@
-const base = process.env.SITE_URL ?? 'http://localhost:3001'
+const base = process.env.SITE_URL ?? 'http://localhost:3002'
 
 export default function robots() {
   return {

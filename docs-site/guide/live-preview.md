@@ -5,7 +5,7 @@ Give a collection a preview target:
 ```php
 public function previewUrl(): ?string
 {
-    return 'http://localhost:3001/posts/{slug}';
+    return 'http://localhost:3002/posts/{slug}';
 }
 ```
 

@@ -191,7 +191,7 @@ show unpublished content without exposing credentials to the browser).
 ```bash
 cd examples/nextjs-blog
 cp .env.example .env.local   # add a MANIFOLD_SERVER_TOKEN for draft previews
-pnpm install && pnpm dev     # http://localhost:3001
+pnpm install && pnpm dev     # http://localhost:3002
 ```
 
 ### Live preview
@@ -201,7 +201,7 @@ Give a collection a preview target:
 ```php
 public function previewUrl(): ?string
 {
-    return 'http://localhost:3001/posts/{slug}';
+    return 'http://localhost:3002/posts/{slug}';
 }
 ```
 

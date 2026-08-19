@@ -54,6 +54,6 @@ class Posts extends Collection
 
     public function previewUrl(): ?string
     {
-        return env('MANIFOLD_PREVIEW_URL', 'http://localhost:3001').'/posts/{slug}';
+        return env('MANIFOLD_PREVIEW_URL', 'http://localhost:3002').'/posts/{slug}';
     }
 }

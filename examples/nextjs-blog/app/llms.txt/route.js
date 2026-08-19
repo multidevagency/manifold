@@ -1,6 +1,6 @@
 import { manifold } from '../../lib/manifold'
 
-const base = process.env.SITE_URL ?? 'http://localhost:3001'
+const base = process.env.SITE_URL ?? 'http://localhost:3002'
 
 // llms.txt: a machine-readable site guide for AI crawlers and answer engines.
 export async function GET() {

@@ -113,6 +113,8 @@ class DatabaseSeeder extends Seeder
             ['Blueprint Desk Mat', 39.00, 'goods'],
         ];
 
+        require __DIR__.'/portfolio-data.php';
+
         foreach ($products as $i => [$title, $price, $kind]) {
             DB::table('mf_products')->insert([
                 'title' => $title,
