@@ -113,6 +113,14 @@ class DatabaseSeeder extends Seeder
             ['Blueprint Desk Mat', 39.00, 'goods'],
         ];
 
+        $assetDir = database_path('seed-assets/cases');
+        if (is_dir($assetDir)) {
+            @mkdir(storage_path('app/public/manifold/cases'), 0755, true);
+            foreach (glob($assetDir.'/*.jpg') as $asset) {
+                copy($asset, storage_path('app/public/manifold/cases/'.basename($asset)));
+            }
+        }
+
         require __DIR__.'/portfolio-data.php';
 
         foreach ($products as $i => [$title, $price, $kind]) {

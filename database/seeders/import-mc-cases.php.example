@@ -1,0 +1,45 @@
+<?php
+
+$now = now();
+$cases = json_decode(file_get_contents('/tmp/claude-501/-/55bcafe1-88b5-4bdf-822b-c5a8e918d840/scratchpad/mc-cases-full.json'), true);
+
+DB::table('mf_case_studies')->where('slug', '50-sites-for-dutch-businesses')->delete();
+
+$order = 10;
+foreach ($cases as $c) {
+    $type = $c['type'] ?? '';
+    $category = str_contains($type, 'AI') ? 'ai'
+        : (preg_match('/SaaS|Platform|CRM/i', $type) ? 'platform' : 'client-work');
+
+    $body = implode('', array_filter([
+        $c['summaryHtml'] ?? null,
+        $c['approachHtml'] ?? null,
+        $c['resultHtml'] ?? null,
+    ]));
+
+    $roles = collect($c['roles'] ?? [])->map(fn ($r) => is_array($r) ? ($r['role'] ?? '') : $r)->filter()->implode(', ');
+    $year = (int) substr((string) ($c['date'] ?? '2025'), 0, 4) ?: 2025;
+
+    DB::table('mf_case_studies')->updateOrInsert(['slug' => $c['slug']], [
+        'title' => $c['title'],
+        'tagline' => str($c['description'] ?? '')->limit(180)->toString(),
+        'category' => $category,
+        'stack' => $roles ?: $type,
+        'year' => $year,
+        'featured' => false,
+        'sort_order' => $order++,
+        'summary' => $c['description'] ?? '',
+        'body' => $body ?: null,
+        'metrics' => json_encode([]),
+        'hero' => $c['_hero_path'] ?? null,
+        'repo_url' => null,
+        'live_url' => $c['projectUrl'] ?? null,
+        'status' => 'published',
+        'meta_title' => $c['title'],
+        'meta_description' => str($c['description'] ?? '')->limit(158)->toString(),
+        'created_at' => $now, 'updated_at' => $now,
+    ]);
+}
+
+echo 'total case studies: '.DB::table('mf_case_studies')->count()
+    .' | with hero: '.DB::table('mf_case_studies')->whereNotNull('hero')->count();

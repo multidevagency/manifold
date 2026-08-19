@@ -31,34 +31,25 @@ export default async function Home() {
       </section>
 
       <section style={{ padding: '3rem 0' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <h2 style={{ fontSize: '2rem' }}>Selected work</h2>
-          <Link href="/work" className="mono" style={{ color: 'var(--accent)' }}>All work →</Link>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '2rem' }}>
+          <h2 style={{ fontSize: '2rem', margin: 0 }}>Selected work</h2>
+          <Link href="/work" className="mono" style={{ color: 'var(--accent)' }}>Alle cases →</Link>
         </div>
-        <div style={{ display: 'grid', gap: '1.5rem' }}>
+        <ul className="case-grid" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           {featured.map((cs) => (
-            <Link
-              key={cs.id}
-              href={`/work/${cs.slug}`}
-              className="card"
-              style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'space-between', alignItems: 'baseline', padding: '1.5rem' }}
-            >
-              <div style={{ maxWidth: '38em' }}>
-                <span className="mono" style={{ color: 'var(--accent)' }}>{cs.category}</span>
-                <h3 style={{ margin: '0.3em 0', fontFamily: 'system-ui', fontSize: '1.4rem' }}>{cs.title}</h3>
-                <p style={{ margin: 0, color: 'var(--ink-soft)' }}>{cs.tagline}</p>
-              </div>
-              <div style={{ display: 'flex', gap: '2rem' }}>
-                {(cs.metrics ?? []).slice(0, 2).map((m, i) => (
-                  <div key={i}>
-                    <strong style={{ display: 'block', fontFamily: 'system-ui', fontSize: '1.6rem' }}>{m.value}</strong>
-                    <span className="mono" style={{ color: 'var(--ink-soft)' }}>{m.label}</span>
-                  </div>
-                ))}
-              </div>
-            </Link>
+            <li key={cs.id}>
+              <Link href={`/work/${cs.slug}`} className="case-card">
+                <figure>
+                  {cs.hero && <img src={cs.hero.url} alt={`${cs.title} preview`} loading="lazy" decoding="async" />}
+                </figure>
+                <span className="mono case-type">{cs.category}</span>
+                <h3>{cs.title}</h3>
+                <p>{cs.tagline}</p>
+                <span className="case-btn">Bekijk case <span aria-hidden="true">→</span></span>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section style={{ padding: '1rem 0 2rem', borderTop: '1px solid var(--line)' }}>
