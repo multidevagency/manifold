@@ -19,7 +19,11 @@
         "meta_title": "Manifold — code-first headless CMS",
         "meta_description": "Define a PHP class, get the schema, the API, and the admin. Built with Laravel 13 and Nuxt 4.",
         "created_at": "2026-08-19 12:55:37",
-        "updated_at": "2026-08-19 12:55:37"
+        "updated_at": "2026-08-19 12:55:37",
+        "client": "Open source",
+        "industry": "Developer tooling",
+        "roles": "[{\"name\":\"Product & architectuur\"},{\"name\":\"Laravel backend\"},{\"name\":\"Nuxt admin\"},{\"name\":\"SDK & CLI\"},{\"name\":\"Docs & CI\"}]",
+        "gallery": null
     },
     {
         "id": 2,
@@ -41,7 +45,11 @@
         "meta_title": "OEMLine — auto parts at catalog scale",
         "meta_description": "Ecommerce platform for OEM car parts: half a million products, vehicle-aware search.",
         "created_at": "2026-08-19 12:55:37",
-        "updated_at": "2026-08-19 12:55:37"
+        "updated_at": "2026-08-19 12:55:37",
+        "client": "OEMLine B.V.",
+        "industry": "Automotive e-commerce",
+        "roles": "[{\"name\":\"Platform-architectuur\"},{\"name\":\"Catalogus & data-pipelines\"},{\"name\":\"Elasticsearch\"},{\"name\":\"Storefronts\"},{\"name\":\"Infrastructuur\"}]",
+        "gallery": null
     },
     {
         "id": 4,
@@ -63,7 +71,11 @@
         "meta_title": "AI Receptionist",
         "meta_description": "A voice agent that answers the phone: SIP telephony meets OpenAI Realtime.",
         "created_at": "2026-08-19 12:55:37",
-        "updated_at": "2026-08-19 12:55:37"
+        "updated_at": "2026-08-19 12:55:37",
+        "client": "Multichoice Agency",
+        "industry": "Voice AI",
+        "roles": "[{\"name\":\"Voice pipeline\"},{\"name\":\"SIP-integratie\"},{\"name\":\"Realtime AI\"}]",
+        "gallery": null
     },
     {
         "id": 7,
@@ -85,7 +97,11 @@
         "meta_title": "Aurora AI",
         "meta_description": "Self-hosted AI beeld- & videostudio · Next.js webapp · Volwaardig Higgsfield-alternatief · Eigen modellen op eigen GPU-infrastructuur · Image, video, characte...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Aurora AI",
+        "industry": "AI / Creative software",
+        "roles": "[{\"name\":\"Productontwikkeling\"},{\"name\":\"Webdevelopment\"},{\"name\":\"Next.js\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"AI-integratie\"},{\"name\":\"Self-hosted infrastructuur\"},{\"name\":\"Branding\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-12_apps-1600x2957.png?prefix=payload-media\",\"caption\":\"Apps & studio's \\u2014 de volledige creatieve stack\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-02_ai_image-1600x2169.png?prefix=payload-media\",\"caption\":\"AI Image Studio\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-03_ai_video-1600x2572.png?prefix=payload-media\",\"caption\":\"AI Video Studio\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-04_cinema-studio-1600x2041.png?prefix=payload-media\",\"caption\":\"Cinema Studio \\u2014 cinematische regie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-05_marketing-studio-1600x2369.png?prefix=payload-media\",\"caption\":\"Marketing Studio \\u2014 ads & productvideo\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-06_ugc-factory-1600x2041.png?prefix=payload-media\",\"caption\":\"UGC Factory \\u2014 avatar-content\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-07_character-1600x2041.png?prefix=payload-media\",\"caption\":\"Character (Soul ID) \\u2014 consistente personages\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-08_lipsync-1600x2056.png?prefix=payload-media\",\"caption\":\"Lipsync Studio \\u2014 pratende clips\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-10_canvas-1600x2041.png?prefix=payload-media\",\"caption\":\"Canvas \\u2014 visuele workflows\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-11_storyboard-1600x2041.png?prefix=payload-media\",\"caption\":\"Storyboard\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-15_supercomputer-1600x3009.png?prefix=payload-media\",\"caption\":\"Supercomputer \\u2014 agents, skills & automations\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-13_pricing-1600x2041.png?prefix=payload-media\",\"caption\":\"Pricing \\u2014 simple, self-hosted\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-14_enterprise-1600x2359.png?prefix=payload-media\",\"caption\":\"Enterprise\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/aurora-ai-16_sign-in-1600x2041.png?prefix=payload-media\",\"caption\":\"Sign-in \\u2014 toegang tot de studio\"}]"
     },
     {
         "id": 8,
@@ -107,7 +123,11 @@
         "meta_title": "Auto Inkoop AI",
         "meta_description": "AI-inkoopagent voor schade-auto's · React, Vite & Supabase · Scant alle grote handelsplatforms, taxeert schade en marge en rangschikt inkoopkansen op dealscor...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Auto Inkoop AI",
+        "industry": "Automotive & AI SaaS",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"React & Vite\"},{\"name\":\"AI-integratie (OpenAI & Anthropic)\"},{\"name\":\"Supabase & Edge Functions\"},{\"name\":\"Product- & UI\\/UX-design\"},{\"name\":\"Huisstijl & Brand Guidelines\"},{\"name\":\"Stripe-abonnementen\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/autoinkoopai-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Inloggen \\u2014 toegang tot het scanner-dashboard\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/autoinkoopai-02_account-aanmaken-1600x1000.png?prefix=payload-media\",\"caption\":\"Account aanmaken \\u2014 Google of e-mail\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/autoinkoopai-03_magic-link-1600x1000.png?prefix=payload-media\",\"caption\":\"Wachtwoordloos inloggen \\u2014 inline feedback\"}]"
     },
     {
         "id": 9,
@@ -129,7 +149,11 @@
         "meta_title": "Maan & Zon — Facturatiesysteem",
         "meta_description": "Besloten webapplicatie voor de zorgadministratie van een thuiszorgorganisatie · Urenregistratie, facturatie & zorgdossier · Installeerbare PWA · Inloggen met...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Maan & Zon Thuiszorg B.V.",
+        "industry": "Thuiszorg / Zorgadministratie",
+        "roles": "[]",
+        "gallery": "[]"
     },
     {
         "id": 10,
@@ -151,7 +175,11 @@
         "meta_title": "Bouw je CV",
         "meta_description": "SaaS cv-builder · Vue 3 & Tailwind CSS · Drag-and-drop editor met AI · Acht ontwerpthema's · Tweetalig NL/EN · PDF- & Word-export",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Bouw je CV",
+        "industry": "SaaS / Loopbaan & sollicitatie",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"SaaS-ontwikkeling\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"AI-integratie\"},{\"name\":\"Meertalig (NL\\/EN)\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-06_editor-1600x1000.png?prefix=payload-media\",\"caption\":\"Drag-and-drop editor met live thema-paneel\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-07_functies-1600x1475.png?prefix=payload-media\",\"caption\":\"Functies \\u2014 alles wat andere cv-makers niet laten doen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-08_templates-1600x1309.png?prefix=payload-media\",\"caption\":\"Acht ontwerp-startpunten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-05_wizard-1600x1000.png?prefix=payload-media\",\"caption\":\"Stap-voor-stap wizard met cv-import\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-04_voorbeeld-1600x1196.png?prefix=payload-media\",\"caption\":\"Voorbeeld-cv \\u2014 print- en PDF-klaar\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-09_stappen-1600x647.png?prefix=payload-media\",\"caption\":\"Van leeg vel naar sollicitatie in drie stappen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-10_prijs-1600x920.png?prefix=payload-media\",\"caption\":\"Prijzen \\u2014 proefperiode naast Pro\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-11_faq-1200x630.png?prefix=payload-media\",\"caption\":\"Veelgestelde vragen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-02_signup-1600x1000.png?prefix=payload-media\",\"caption\":\"Registratie \\u2014 e-mail of Google\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/bouwjecv-03_login-1600x1000.png?prefix=payload-media\",\"caption\":\"Inloggen\"}]"
     },
     {
         "id": 11,
@@ -173,7 +201,11 @@
         "meta_title": "Sky Zirve",
         "meta_description": "Rooftop restaurant, sky bar & club lounge in Den Haag · Next.js · Bewegende hero met drone-beeld · Menu's, evenementenagenda & privé evenementen · Reserveren...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "SKY ZIRVE RESTAURANT",
+        "industry": "Horeca / Hospitality",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"Next.js\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Branding & Design System\"},{\"name\":\"Reserveringsflow\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-01_home-1600x5501.png?prefix=payload-media\",\"caption\":\"Homepage \\u2014 volledige pagina\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-02_restaurant-1600x4580.png?prefix=payload-media\",\"caption\":\"Het Restaurant \\u2014 fine dining\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-04_skybar-1600x3787.png?prefix=payload-media\",\"caption\":\"De SkyBar \\u2014 signature cocktails\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-05_club-lounge-1600x4498.png?prefix=payload-media\",\"caption\":\"De Club Lounge \\u2014 nachtleven\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-03_menus-1600x3402.png?prefix=payload-media\",\"caption\":\"Onze menu's \\u2014 sushi, diner & cocktails\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-06_wat-er-speelt-1600x3127.png?prefix=payload-media\",\"caption\":\"Wat er speelt \\u2014 evenementenagenda\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-07_prive-evenementen-1600x5216.png?prefix=payload-media\",\"caption\":\"Priv\\u00e9 evenementen \\u2014 ruimtes & arrangementen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-08_booking-1600x2171.png?prefix=payload-media\",\"caption\":\"Reserveren \\u2014 boeking in vier stappen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-09_veelgestelde-vragen-1600x3287.png?prefix=payload-media\",\"caption\":\"Veelgestelde vragen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/skyzirve-10_contact-1600x3363.png?prefix=payload-media\",\"caption\":\"Contact & routebeschrijving\"}]"
     },
     {
         "id": 12,
@@ -195,7 +227,11 @@
         "meta_title": "Vifauna",
         "meta_description": "Website voor zorgorganisatie Vifauna B.V. · React & Vite · Begeleid wonen, ambulante begeleiding & dagbesteding · Rotterdam · AGB geregistreerd en VECOZO gece...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Vifauna B.V.",
+        "industry": "Zorg & begeleiding",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"React & Vite\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Huisstijl & Brand Guidelines\"},{\"name\":\"Responsive design\"},{\"name\":\"SEO & Structured Data\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-03_aanbod-1600x2017.png?prefix=payload-media\",\"caption\":\"Ons aanbod \\u2014 drie zorgvormen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-10_begeleid-wonen-1600x2311.png?prefix=payload-media\",\"caption\":\"Begeleid wonen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-11_ambulante-begeleiding-1600x2311.png?prefix=payload-media\",\"caption\":\"Ambulante begeleiding\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-12_dagbesteding-1600x2267.png?prefix=payload-media\",\"caption\":\"Dagbesteding\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-02_over-ons-1600x3414.png?prefix=payload-media\",\"caption\":\"Over ons \\u2014 missie, visie & kernwaarden\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-04_ons-team-1600x2434.png?prefix=payload-media\",\"caption\":\"Ons team\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-06_kwaliteitsgarantie-1600x3368.png?prefix=payload-media\",\"caption\":\"Kwaliteitsgarantie \\u2014 AGB & VECOZO\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-05_vestigingen-1600x2669.png?prefix=payload-media\",\"caption\":\"Vestigingen \\u2014 Rotterdam en omgeving\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-07_stages-1600x3380.png?prefix=payload-media\",\"caption\":\"Stageplekken\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-08_aanmelden-1600x4274.png?prefix=payload-media\",\"caption\":\"Aanmelden \\u2014 formulier & aanmeldproces\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vifauna-09_contact-1600x2678.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 13,
@@ -217,7 +253,11 @@
         "meta_title": "Dutch Transport Group",
         "meta_description": "Publieke marketingsite voor een transportonderneming · WordPress · Nationaal wegtransport door heel Nederland · Container, ADR, special cargo & trailer/huif ·...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Dutch Transport Group B.V.",
+        "industry": "Transport & Distributie",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Copywriting\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-12_transport-diensten-1600x6838.png?prefix=payload-media\",\"caption\":\"Diensten \\u2014 vier specialisaties\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-05_transport-diensten_container-vervoer-1600x4767.png?prefix=payload-media\",\"caption\":\"Container vervoer \\u2014 20FT, 40FT & 45FT\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-03_transport-diensten_adr-vervoer-1600x4302.png?prefix=payload-media\",\"caption\":\"ADR vervoer \\u2014 klasse 2 t\\/m 9\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-04_transport-diensten_special-cargo-1600x4302.png?prefix=payload-media\",\"caption\":\"Special cargo \\u2014 oversized & projectlading\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-02_transport-diensten_trailer-huif-1600x4302.png?prefix=payload-media\",\"caption\":\"Trailer & huif \\u2014 standaard en mega\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-13_transport-diensten_palletdistributie-1600x3691.png?prefix=payload-media\",\"caption\":\"Palletdistributie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-15_netwerkdistributie-1600x3691.png?prefix=payload-media\",\"caption\":\"Netwerkdistributie \\u2014 landelijke dekking\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-11_over-ons-1600x4979.png?prefix=payload-media\",\"caption\":\"Over ons \\u2014 verhaal & cijfers\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/dutchtransportgroup-06_contact-1600x3303.png?prefix=payload-media\",\"caption\":\"Contact & offerteaanvraag\"}]"
     },
     {
         "id": 14,
@@ -239,7 +279,11 @@
         "meta_title": "Matika Technical Solutions",
         "meta_description": "Zakelijke website voor technisch gebouwbeheer · WordPress · Eén partner voor alle gebouwgebonden installaties · Beheer, inspecties & onderhoud · Tweetalig NL/...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Matika Technical Solutions",
+        "industry": "Technisch beheer / Installaties",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Meertalig (NL\\/EN)\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-03_diensten-1600x2880.png?prefix=payload-media\",\"caption\":\"Diensten \\u2014 onder \\u00e9\\u00e9n regie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-04_diensten_technisch-gebouwbeheer-1600x3814.png?prefix=payload-media\",\"caption\":\"Technisch gebouwbeheer\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-05_diensten_brandveiligheid-en-keuringen-1600x3832.png?prefix=payload-media\",\"caption\":\"Brandveiligheid & keuringen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-06_diensten_koeltechniek-en-airconditioning-1600x3526.png?prefix=payload-media\",\"caption\":\"Koeltechniek & airconditioning\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-09_diensten_luchtbehandeling-1600x3656.png?prefix=payload-media\",\"caption\":\"Luchtbehandeling\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-10_diensten_elektrotechniek-1600x3543.png?prefix=payload-media\",\"caption\":\"Elektrotechniek\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-11_diensten_meet-en-regeltechniek-1600x3607.png?prefix=payload-media\",\"caption\":\"Meet- & regeltechniek\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-02_over-matika-1600x3703.png?prefix=payload-media\",\"caption\":\"Over Matika\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/matika-12_contact-1600x2289.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 5,
@@ -261,7 +305,11 @@
         "meta_title": "ParentPlaza",
         "meta_description": "Matchingplatform voor kinderopvang · Next.js · Gastouders & (vraag)ouders verbinden · Veilig matchen · Zonder wachtlijst · Eigen profiel & veilige chat",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "ParentPlaza",
+        "industry": "Kinderopvang / Platform",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"Next.js \\/ React\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Platform-ontwikkeling\"},{\"name\":\"Matching & chat\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-02_hoe-werkt-het-1600x4493.png?prefix=payload-media\",\"caption\":\"Hoe werkt het\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-04_gastouders-1600x4937.png?prefix=payload-media\",\"caption\":\"Voor gastouders\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-05_ouders-1600x5566.png?prefix=payload-media\",\"caption\":\"Voor (vraag)ouders\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-06_gastouderbureaus-1600x3722.png?prefix=payload-media\",\"caption\":\"Voor gastouderbureaus\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-07_profielen-1600x4612.png?prefix=payload-media\",\"caption\":\"Profielen & matchen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-03_wat-bieden-wij-1600x4152.png?prefix=payload-media\",\"caption\":\"Wat bieden wij\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-08_abonnementen-1600x3056.png?prefix=payload-media\",\"caption\":\"Abonnementen & kosten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-14_over-ons-1600x4979.png?prefix=payload-media\",\"caption\":\"Over ons\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/parentplaza-18_community-1600x4256.png?prefix=payload-media\",\"caption\":\"Community\"}]"
     },
     {
         "id": 3,
@@ -283,7 +331,11 @@
         "meta_title": "The Agency CRM",
         "meta_description": "All-in-one CRM-platform voor agencies · Nuxt · Marketing-frontend + CRM-dashboard · Leads, sales, projecten, facturatie, marketing & AI",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "The Agency CRM",
+        "industry": "SaaS / CRM-platform",
+        "roles": "[{\"name\":\"Product Design\"},{\"name\":\"Webdevelopment\"},{\"name\":\"Nuxt \\/ Vue\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"SaaS-platform\"},{\"name\":\"AI-integratie\"},{\"name\":\"Branding\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-desktop-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Frontend \\u2014 homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-14_1600x1000-1600x1000.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 sales pipeline\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-06_1585x1568-1200x630.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 360\\u00b0 klantbeeld\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-11_1585x1047-1200x630.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 leads\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-05_1585x1648-1200x630.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 facturen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-22_1600x1000-1600x1000.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 projecten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-21_1600x1000-1600x1000.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 marketing command center (AI)\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-28_1600x1000-1600x1000.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 campagnes\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-25_1600x1000-1600x1000.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 funnels\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/theagencycrm-dashboard-images-12_1585x1042-1200x630.png?prefix=payload-media\",\"caption\":\"Dashboard \\u2014 AI-activiteit\"}]"
     },
     {
         "id": 15,
@@ -305,7 +357,11 @@
         "meta_title": "Powerforce",
         "meta_description": "Website voor uitzendbureau · WordPress · Uitzenden · Detacheren · Werving & selectie · ZZP/freelance · Vacatures · Voor werkgevers & werknemers",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Powerforce B.V.",
+        "industry": "Uitzendbureau / Staffing",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Content & structuur\"},{\"name\":\"Responsive design\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-02_over-ons-1600x7024.png?prefix=payload-media\",\"caption\":\"Over ons\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-03_diensten_uitzenden-1600x5159.png?prefix=payload-media\",\"caption\":\"Uitzenden\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-04_diensten_detacheren-1600x4654.png?prefix=payload-media\",\"caption\":\"Detacheren\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-05_diensten_werving-selectie-1600x5284.png?prefix=payload-media\",\"caption\":\"Werving & selectie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-06_diensten_zzp-freelance-1600x3967.png?prefix=payload-media\",\"caption\":\"ZZP \\/ freelance\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-09_vacatures-1600x8091.png?prefix=payload-media\",\"caption\":\"Vacatures\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/powerforce-11_contact-1600x3397.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 16,
@@ -327,7 +383,11 @@
         "meta_title": "Randstad Electronics",
         "meta_description": "Bedrijfswebsite voor een BORG-gecertificeerd beveiligingsbedrijf · Statische website · Camerasystemen · Inbraakbeveiliging · Toegangscontrole · Mistgeneratore...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Randstad Electronics",
+        "industry": "Beveiliging / Beveiligingssystemen",
+        "roles": "[{\"name\":\"Webdesign\"},{\"name\":\"Mobirise\"},{\"name\":\"Beveiligingsbranche\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-02_camerasystemen.html-1600x3173.png?prefix=payload-media\",\"caption\":\"Camerasystemen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-03_inbraakbeveiliging.html-1600x2827.png?prefix=payload-media\",\"caption\":\"Inbraakbeveiliging\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-04_toegangscontrole.html-1600x3147.png?prefix=payload-media\",\"caption\":\"Toegangscontrole\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-05_mistgeneratoren.html-1600x2464.png?prefix=payload-media\",\"caption\":\"Mistgeneratoren\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/randstad-06_contact.html-1600x2164.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 17,
@@ -349,7 +409,11 @@
         "meta_title": "ATM TEK",
         "meta_description": "Website voor aannemersbedrijf in kaswerkzaamheden · WordPress · Diensten · Galerij · Vacatures · Offerte aanvragen",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "ATM TEK",
+        "industry": "Aannemersbedrijf / Kasbouw",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Visuele\\/fotografie-presentatie\"},{\"name\":\"SEO\"},{\"name\":\"Onderhoud & support\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-02_over-ons-1600x1999.png?prefix=payload-media\",\"caption\":\"Over ons\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-03_onze-diensten-1600x3081.png?prefix=payload-media\",\"caption\":\"Onze diensten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-04_galerij-1600x5087.png?prefix=payload-media\",\"caption\":\"Galerij\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-05_vacatures-1600x1704.png?prefix=payload-media\",\"caption\":\"Vacatures\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-06_offerte-aanvragen-1600x2276.png?prefix=payload-media\",\"caption\":\"Offerte aanvragen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/atmtek-07_contact-1600x2652.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 18,
@@ -371,7 +435,11 @@
         "meta_title": "Fitbyemre",
         "meta_description": "Website voor personal trainer · WordPress · Personal training · Duo-training · Online coaching · Schema's op maat · Rotterdam & Delft",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Fitbyemre",
+        "industry": "Fitness / Personal Training",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"E-commerce \\/ WooCommerce\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-02_personal-training-pt-fitbyemre-1600x2222.png?prefix=payload-media\",\"caption\":\"Personal training\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-03_duo-training-1600x2096.png?prefix=payload-media\",\"caption\":\"Duo-training\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-04_online-coaching-1600x3057.png?prefix=payload-media\",\"caption\":\"Online coaching\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-06_sportabonnement-1600x2056.png?prefix=payload-media\",\"caption\":\"Sportabonnement\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-08_voedingsschema-1600x1500.png?prefix=payload-media\",\"caption\":\"Voedingsschema\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-09_trainingsschema-1600x1534.png?prefix=payload-media\",\"caption\":\"Trainingsschema\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/fitbyemre-10_shop-1600x1111.png?prefix=payload-media\",\"caption\":\"Shop\"}]"
     },
     {
         "id": 19,
@@ -393,7 +461,11 @@
         "meta_title": "Maaz Clean Revolution",
         "meta_description": "Webshop voor schoonmaakproducten · WordPress + WooCommerce · Online bestellen · Betalen met iDEAL · Galerij · Blog",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Maaz Clean Revolution",
+        "industry": "Schoonmaak / Schoonmaakproducten",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"E-commerce (WooCommerce)\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"iDEAL-betaling\"},{\"name\":\"Responsive design\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-02_shop-1600x2741.png?prefix=payload-media\",\"caption\":\"Webshop\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-03_schoonmaakproducten-bestellen-met-ideal-1600x2746.png?prefix=payload-media\",\"caption\":\"Bestellen met iDEAL\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-04_galerij-1600x3327.png?prefix=payload-media\",\"caption\":\"Galerij\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-05_blog-1600x3406.png?prefix=payload-media\",\"caption\":\"Blog\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/maazcleanrevolution-07_contact-1600x2568.png?prefix=payload-media\",\"caption\":\"Contact\"}]"
     },
     {
         "id": 20,
@@ -415,7 +487,11 @@
         "meta_title": "D.R. Thuiszorg",
         "meta_description": "Website voor thuiszorgaanbieder · WordPress · Verpleging · Wijkverpleging · Huishoudelijke hulp · Dagbesteding · Palliatieve zorg · Aanmelden",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "D.R. Thuiszorg",
+        "industry": "Thuiszorg / Zorg",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Content & structuur\"},{\"name\":\"SEO\"},{\"name\":\"Onderhoud & support\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-02_over-ons-1600x2888.png?prefix=payload-media\",\"caption\":\"Over ons\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-03_diensten-1600x3046.png?prefix=payload-media\",\"caption\":\"Diensten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-04_thuiszorg-1600x2889.png?prefix=payload-media\",\"caption\":\"Thuiszorg\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-05_verpleging-1600x2889.png?prefix=payload-media\",\"caption\":\"Verpleging\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-06_wijkverpleging-1600x2889.png?prefix=payload-media\",\"caption\":\"Wijkverpleging\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-07_huishoudelijke-hulp-1600x2889.png?prefix=payload-media\",\"caption\":\"Huishoudelijke hulp\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/thuiszorgdr-09_palliatieve-terminale-zorg-1600x3141.png?prefix=payload-media\",\"caption\":\"Palliatieve zorg\"}]"
     },
     {
         "id": 21,
@@ -437,7 +513,11 @@
         "meta_title": "Alkanaany",
         "meta_description": "Website voor schoonmaakbedrijf · WordPress · Glasbewassing · Vloer- & tapijtreiniging · Specialistische reiniging · UVC-desinfectie · Milieuvriendelijk schoon...",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Schoonmaakbedrijf Alkanaany",
+        "industry": "Schoonmaak / Facilitair",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Content & structuur\"},{\"name\":\"Responsive design\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-03_diensten-1600x4633.png?prefix=payload-media\",\"caption\":\"Diensten\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-04_glasbewassing-1600x3759.png?prefix=payload-media\",\"caption\":\"Glasbewassing\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-05_vloerreiniging-1600x2159.png?prefix=payload-media\",\"caption\":\"Vloerreiniging\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-08_specialistische-reiniging-1600x5304.png?prefix=payload-media\",\"caption\":\"Specialistische reiniging\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-09_uvc-desinfectie-en-ontsmetting-1600x3162.png?prefix=payload-media\",\"caption\":\"UVC-desinfectie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-10_milieuvriendelijk-1600x2347.png?prefix=payload-media\",\"caption\":\"Milieuvriendelijk\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/alkanaany-11_referenties-1600x7043.png?prefix=payload-media\",\"caption\":\"Referenties\"}]"
     },
     {
         "id": 22,
@@ -459,7 +539,11 @@
         "meta_title": "Maan & Zon Thuiszorg",
         "meta_description": "Website voor thuiszorgorganisatie · Next.js · Thuiszorg · Wijkverpleging · Persoonlijke verzorging · Huishoudelijke hulp · Dagbesteding · Palliatieve zorg",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Maan & Zon Thuiszorg",
+        "industry": "Thuiszorg / Zorg",
+        "roles": "[]",
+        "gallery": "[]"
     },
     {
         "id": 23,
@@ -481,7 +565,11 @@
         "meta_title": "Wrapmaster",
         "meta_description": "Website voor car customizing-specialist · Next.js · Car wrapping · PPF · Detailing · Portfolio · Offerte aanvragen",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Wrapmaster",
+        "industry": "Car wrapping / Detailing",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"Next.js \\/ Headless\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Visuele\\/fotografie-presentatie\"},{\"name\":\"Performance-optimalisatie\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-03_carwrapping-1600x6074.png?prefix=payload-media\",\"caption\":\"Car wrapping\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-04_ppf-1600x5963.png?prefix=payload-media\",\"caption\":\"Paint Protection Film\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-05_chrome-delete-1600x4901.png?prefix=payload-media\",\"caption\":\"Chrome delete\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-06_ambient-light-1600x6074.png?prefix=payload-media\",\"caption\":\"Ambient light\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-08_detailing-1600x5963.png?prefix=payload-media\",\"caption\":\"Detailing\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-09_reclame-en-design-1600x5012.png?prefix=payload-media\",\"caption\":\"Reclame & design\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/wrapmaster-12_bodykit-1600x4710.png?prefix=payload-media\",\"caption\":\"Bodykit\"}]"
     },
     {
         "id": 24,
@@ -503,7 +591,11 @@
         "meta_title": "Lionzone",
         "meta_description": "Sportschool-website · Personal & small group training · Lidmaatschappen · Online inschrijven · WooCommerce shop",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Lionzone",
+        "industry": "Fitness / Sportschool",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"WordPress\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"E-commerce (WooCommerce)\"},{\"name\":\"Leden- & boekingsflow\"},{\"name\":\"SEO\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-02_personal-trainingen-1600x3919.png?prefix=payload-media\",\"caption\":\"Personal trainingen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-03_small-group-trainingen-1600x3834.png?prefix=payload-media\",\"caption\":\"Small group trainingen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-05_sportabonnement-1600x2511.png?prefix=payload-media\",\"caption\":\"Sportabonnement\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-08_trainers-1600x2253.png?prefix=payload-media\",\"caption\":\"Trainers\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-09_trainingsruimte-1600x2742.png?prefix=payload-media\",\"caption\":\"Trainingsruimte\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-06_apparatuur-1600x3476.png?prefix=payload-media\",\"caption\":\"Apparatuur\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/lionzone-13_tarieven-1600x2183.png?prefix=payload-media\",\"caption\":\"Tarieven\"}]"
     },
     {
         "id": 25,
@@ -525,7 +617,11 @@
         "meta_title": "Kronos Blinds",
         "meta_description": "Premium e-commerce voor raambekleding op maat · Next.js · Productconfigurator · Advies aan huis · Online meethulp · Fabriek-direct",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Kronos Blinds",
+        "industry": "Raamdecoratie / Interieur",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"E-commerce\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Next.js \\/ Headless\"},{\"name\":\"Productconfigurator\"},{\"name\":\"Conversie-optimalisatie\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-00_hero-1600x1000.png?prefix=payload-media\",\"caption\":\"Homepage\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-02_producten-1600x4522.png?prefix=payload-media\",\"caption\":\"Producten \\u2014 overzicht\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-03_maatwerk-1600x3307.png?prefix=payload-media\",\"caption\":\"Maatwerk\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-04_advies-aan-huis-1600x3711.png?prefix=payload-media\",\"caption\":\"Advies aan huis\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-05_inspiratie-1600x2786.png?prefix=payload-media\",\"caption\":\"Inspiratie\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-14_category_houten-jaloezieen-1600x2559.png?prefix=payload-media\",\"caption\":\"Houten jaloezie\\u00ebn\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-15_category_rolgordijnen-1600x3274.png?prefix=payload-media\",\"caption\":\"Rolgordijnen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/kronosblinds-17_producten_textiel-rolgordijnen-lux-1600x1111.png?prefix=payload-media\",\"caption\":\"Productdetail \\u2014 configurator\"}]"
     },
     {
         "id": 26,
@@ -547,7 +643,11 @@
         "meta_title": "Vakwerkplatform",
         "meta_description": "Maatwerk staffingplatform · ATS · CRM · Matching · Contracten & Facturatie · ZZP-portaal · Push Notificaties",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Vakwerkplatform",
+        "industry": "Staffing / Uitzenden & Detachering",
+        "roles": "[{\"name\":\"Webdevelopment\"},{\"name\":\"App Development\"},{\"name\":\"UI\\/UX Design\"},{\"name\":\"Platform Architectuur\"},{\"name\":\"API-integratie\"},{\"name\":\"Custom Admin & CRM\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-home-1600x1046.png?prefix=payload-media\",\"caption\":\"Dashboard\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-candidates-1600x1000.png?prefix=payload-media\",\"caption\":\"Kandidaten (ATS)\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-companies-1600x1000.png?prefix=payload-media\",\"caption\":\"Opdrachtgevers (CRM)\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-vacancies-1600x1000.png?prefix=payload-media\",\"caption\":\"Vacatures\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-matches-1600x1000.png?prefix=payload-media\",\"caption\":\"Matching\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-map-1600x1000.png?prefix=payload-media\",\"caption\":\"Geo-zoek\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-plaatsingen-1600x1000.png?prefix=payload-media\",\"caption\":\"Plaatsingen\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/vakwerkplatform-blur-invoices-1600x1000.png?prefix=payload-media\",\"caption\":\"Facturen\"}]"
     },
     {
         "id": 27,
@@ -569,7 +669,11 @@
         "meta_title": "XL Groothandel",
         "meta_description": "Maatwerk Webshop · App Development · MegaWin Kassakoppeling · Custom Admin · Push Notificaties",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "XL Groothandel B.V.",
+        "industry": "B2B / Drankengroothandel",
+        "roles": "[]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/screencapture-apps-apple-nl-app-xl-groothandel-dranken-b-v-id6763302654-2026-06-03-14_47_36-1600x2069.png?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/imageye___-_imgi_111_314x680bb-60-1200x630.jpg?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/imageye___-_imgi_139_314x680bb-1200x630.webp?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/imageye___-_imgi_101_460x998bb-60-1200x630.jpg?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/imageye___-_imgi_84_460x998bb-1-1200x630.webp?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/imageye___-_imgi_84_460x998bb-1200x630.webp?prefix=payload-media\",\"caption\":\"app store\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_02-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_03-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_04-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_05-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_06-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_07-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_08-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_14-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/xl-app_15-1200x630.png?prefix=payload-media\",\"caption\":\"XL Groothandel app \\u2014 iPhone\"}]"
     },
     {
         "id": 28,
@@ -591,6 +695,10 @@
         "meta_title": "Nederlandsche Rijschool",
         "meta_description": "Maatwerk website met interactieve scroll-reactive hero-video, motion design en custom admin dashboard voor lead-management. Vue/Nuxt/GSAP stack op Vercel.",
         "created_at": "2026-08-19 15:07:10",
-        "updated_at": "2026-08-19 15:07:10"
+        "updated_at": "2026-08-19 15:55:07",
+        "client": "Nederlandsche Rijschool",
+        "industry": "Rijschool",
+        "roles": "[{\"name\":\"Custom Development\"},{\"name\":\"Motion Design\"},{\"name\":\"Admin Dashboard\"},{\"name\":\"Strategy\"}]",
+        "gallery": "[{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/screencapture-nederlandscherijschool-nl-rijlespakketten-2026-06-03-12_09_10-1600x4325.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/02_aanmelden-1600x2341.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/03_proefrijles-1600x3919.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/04_rijlespakketten-1600x5750.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/05_theorie-1600x3312.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/06_over-ons-1600x3792.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/07_faq-1600x3366.png?prefix=payload-media\",\"caption\":null},{\"url\":\"https:\\/\\/pkinqmbedmj1mq5vu89rc8bq.exryinnovationlab.com\\/api\\/media\\/file\\/08_contact-1600x2448.png?prefix=payload-media\",\"caption\":null}]"
     }
 ]

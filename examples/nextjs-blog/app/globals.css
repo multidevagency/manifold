@@ -213,3 +213,10 @@ h2 { font-family: system-ui, sans-serif; font-weight: 800; }
 }
 
 .case-card:hover .case-btn { background: var(--accent); gap: 0.8rem; }
+
+.case-body h2 {
+  margin: 2.2em 0 0.5em;
+  font-size: 1.5rem;
+}
+.case-body p { color: rgba(25, 23, 18, 0.85); }
+.case-body ul { padding-left: 1.3em; }

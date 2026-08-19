@@ -33,6 +33,11 @@ class CaseStudies extends Collection
                 'client-work' => 'Client work',
             ])->default('product')->required(),
             Text::make('stack')->help('Comma-separated, e.g. "Laravel, Nuxt, Next.js".'),
+            Text::make('client'),
+            Text::make('industry'),
+            ArrayField::make('roles')->of([
+                Text::make('name')->required(),
+            ]),
             Number::make('year')->default(2026),
             Boolean::make('featured'),
             Number::make('sort_order')->default(99),
@@ -43,6 +48,10 @@ class CaseStudies extends Collection
                 Text::make('label')->required()->help('e.g. "products in catalog"'),
             ]),
             Upload::make('hero'),
+            ArrayField::make('gallery')->of([
+                Text::make('url')->required()->help('Image URL (or /storage path).'),
+                Text::make('caption'),
+            ]),
             Text::make('repo_url')->label('Repository URL'),
             Text::make('live_url')->label('Live URL'),
             Select::make('status')->options(['draft', 'published'])->default('published')->required(),
