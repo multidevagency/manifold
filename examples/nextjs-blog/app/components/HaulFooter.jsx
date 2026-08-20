@@ -29,16 +29,6 @@ export default function HaulFooter({ brand = 'HAUL!', links = [], copyright = 'Â
 
   return (
     <div className="bg-[#f8f9fa]" style={{ fontFamily: 'var(--font-inter)' }}>
-      <section className="flex h-[50vh] items-center justify-center bg-[#FDFDFD] md:h-[30vh] lg:h-[50vh]">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-sm font-bold uppercase tracking-[0.5em] text-gray-300"
-        >
-          View Below
-        </motion.p>
-      </section>
-
       <section
         ref={containerRef}
         className="relative h-screen overflow-hidden bg-cover bg-center"
