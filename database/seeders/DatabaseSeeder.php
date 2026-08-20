@@ -10,7 +10,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        User::factory()->create([
+        // No factory: fake() lives in a dev dependency, and this seeder runs in production images.
+        User::create([
             'name' => 'Demo Admin',
             'email' => 'admin@manifold.test',
             'password' => bcrypt('password'),
