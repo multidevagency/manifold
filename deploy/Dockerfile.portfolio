@@ -7,7 +7,7 @@ COPY packages/client-js packages/client-js
 COPY examples/nextjs-blog examples/nextjs-blog
 
 WORKDIR /repo/examples/nextjs-blog
-RUN pnpm install --no-frozen-lockfile && pnpm build
+RUN pnpm install --no-frozen-lockfile --config.dangerouslyAllowAllBuilds=true && pnpm build
 
 EXPOSE 3002
 CMD ["pnpm", "start"]
