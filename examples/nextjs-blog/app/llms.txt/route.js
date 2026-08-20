@@ -2,9 +2,11 @@ import { manifold } from '../../lib/manifold'
 
 const base = process.env.SITE_URL ?? 'http://localhost:3002'
 
+export const dynamic = 'force-dynamic'
+
 // llms.txt: a machine-readable site guide for AI crawlers and answer engines.
 export async function GET() {
-  const { data: posts } = await manifold.collection('posts').list({ perPage: 100, sort: '-published_at' })
+  const { data: posts } = await manifold.collection('posts').list({ perPage: 100, sort: '-published_at' }).catch(() => ({ data: [] }))
 
   const body = [
     '# Manifold Example Blog',
