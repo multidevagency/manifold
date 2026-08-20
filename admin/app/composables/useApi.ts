@@ -1,7 +1,9 @@
 export const useApi = () => {
   const { token, setToken } = useAuth()
+  const apiBase = useRuntimeConfig().public.apiBase as string
 
   return $fetch.create({
+    baseURL: apiBase || undefined,
     onRequest({ options }) {
       const headers = new Headers(options.headers)
       headers.set('Accept', 'application/json')

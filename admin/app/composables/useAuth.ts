@@ -9,7 +9,7 @@ export const useAuth = () => {
   }
 
   const login = async (email: string, password: string) => {
-    const res = await $fetch<{ token: string; user: any }>('/api/manifold/auth/login', {
+    const res = await useApi()<{ token: string; user: any }>('/api/manifold/auth/login', {
       method: 'POST',
       body: { email, password },
     })

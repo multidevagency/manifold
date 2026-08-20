@@ -5,6 +5,12 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      // Empty in dev: relative paths hit the devProxy below.
+      apiBase: '',
+    },
+  },
   vite: { plugins: [tailwindcss()] },
   app: {
     head: {
