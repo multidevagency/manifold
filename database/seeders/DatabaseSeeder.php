@@ -122,6 +122,11 @@ class DatabaseSeeder extends Seeder
             }
         }
 
+        $cv = database_path('seed-assets/cv-enes-karaca.pdf');
+        if (file_exists($cv)) {
+            copy($cv, storage_path('app/public/manifold/cv-enes-karaca.pdf'));
+        }
+
         require __DIR__.'/portfolio-data.php';
 
         foreach ($products as $i => [$title, $price, $kind]) {
